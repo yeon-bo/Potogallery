@@ -21,20 +21,21 @@
     </nav>
     <a class="account" href="#">Logout</a>
   </header>
-  <main class="myinfo">
+  <main class="gallery">
     <aside>
       <div class="dep _gallery option-title">보기 옵션</div>
       <div class="dep _upload option-title">사진 올리기</div>
       <div class="dep _myinfo option-title">내 정보</div>
       <ul id="sorts" class="dep _gallery">
-        <li class="recent on">최신순 보기</li>
-        <li class="like">좋아요 순 보기</li>
+        <li class="recent on" onclick="setSort('recent')">최신순 보기</li>
+        <li class="like" onclick="setSort('like')">좋아요 순 보기</li>
       </ul>
       <ul id="filters" class="dep _gallery">
-        <li class="all on">전체 사진</li>
-        <li class="mine">내 사진 사진</li>
-        <li class="like">좋아요 한 사진</li>
-        <li class="follow">팔로우 회원 사진</li>
+        <li class="all on" onclick="setFilter('all')">전체 사진</li>
+        <li class="mine" onclick="setFilter('mine')">내 사진 사진</li>
+        <li class="like" onclick="setFilter('like')">좋아요 한 사진</li>
+        <li class="follow" onclick="setFilter('follow')">팔로우 회원 사진</li>
+
       </ul>
     </aside>
     <div class="content">
@@ -48,6 +49,16 @@
       </section>
 
       <section id="gallery" class="dep _gallery ">
+        <article class="hidden">
+            <div class="photo"></div>
+            <div class="info">
+              <div class="like"></div>
+              <div class="author"></div>
+              <div class="desc">
+              </div>
+            </div>
+          </article>
+          
       </section>
 
       <section id="upload" class="dep _upload">
