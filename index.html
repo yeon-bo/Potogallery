@@ -9,19 +9,19 @@
   <script src="js/data.js"></script>
   <script src="js/script.js"></script>
 </head>
-<body>
+<body onload="init()">
   <header>
     <a class="logo" href="#">FastCampus Portfolio</a>
     <nav class="nav">
       <ul>
-        <li class="upload on" onclick="setMenu('gallery')">사진들 보기</li>
+        <li class="gallery" onclick="setMenu('gallery')">사진들 보기</li>
         <li class="upload" onclick="setMenu('upload')">사진 올리기</li>
-        <li class="myinfo" onclick="setMenu('myinfo')">내 정보</li>
+        <li class="myinfo on" onclick="setMenu('myinfo')">내 정보</li>
       </ul>
     </nav>
     <a class="account" href="#">Logout</a>
   </header>
-  <main class="upload">
+  <main class="myinfo">
     <aside>
       <div class="dep _gallery option-title">보기 옵션</div>
       <div class="dep _upload option-title">사진 올리기</div>
@@ -105,9 +105,9 @@
               </td>
             </tr>
           </table>
-          <div class="mi-dep non-edit button">수정</div>
-          <div class="mi-dep edit button">확인</div>
-          <div class="mi-dep edit button cancel">취소</div>
+          <div class="mi-dep non-edit button" onclick="setEditMyInfo(true)">수정</div>
+          <div class="mi-dep edit button" onclick="updateMyInfo()">확인</div>
+          <div class="mi-dep edit button cancel" onclick="setEditMyInfo(false)">취소</div>
         </div>
       </section>
 
