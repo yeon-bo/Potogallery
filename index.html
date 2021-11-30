@@ -14,14 +14,14 @@
     <a class="logo" href="#">FastCampus Portfolio</a>
     <nav class="nav">
       <ul>
-        <li class="gallery on" onclick="setMenu('gallery')">사진들 보기</li>
+        <li class="upload on" onclick="setMenu('gallery')">사진들 보기</li>
         <li class="upload" onclick="setMenu('upload')">사진 올리기</li>
         <li class="myinfo" onclick="setMenu('myinfo')">내 정보</li>
       </ul>
     </nav>
     <a class="account" href="#">Logout</a>
   </header>
-  <main class="gallery">
+  <main class="upload">
     <aside>
       <div class="dep _gallery option-title">보기 옵션</div>
       <div class="dep _upload option-title">사진 올리기</div>
@@ -52,7 +52,10 @@
 
       <section id="upload" class="dep _upload">
         <div class="instruction">나만의 특별한 사진을 업로드합니다.</div>
-        <input class="description" type="text" maxlength="20" placeholder="사진 설명을 20자 이내로 적어주세요."/>
+        <input class="description" 
+        type="text" maxlength="20" 
+        placeholder="사진 설명을 20자 이내로 적어주세요."
+        onkeyup="setDescLength()"/>
         <span class="descLength">0/20</span>
         <br>
         <input type="file"/>
